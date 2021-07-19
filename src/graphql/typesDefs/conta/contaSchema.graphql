@@ -7,7 +7,7 @@ type Conta {
 
 type Query {
     contas: [Conta!]!,
-    saldo(conta: Int!): Conta
+    saldo(conta: Int!): Float
 }
 
 type Mutation {

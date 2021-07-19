@@ -11,10 +11,14 @@ mongoose.connect('mongodb://mongo:27017/maibank', {
     useUnifiedTopology: true
 });
 
-const server = new ApolloServer({
+const config = {
     typeDefs, 
     resolvers,
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground({})]
-});
+};
+
+const server = new ApolloServer(config);
 
 server.listen();
+
+module.exports = config;

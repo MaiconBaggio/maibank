@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --legacy-watch src/index.js -e js, graphql"
+    "start": "nodemon --legacy-watch src/index.js",
+    "test": "jest"
   },
   "author": "Maicon D Baggio",
   "license": "MIT",
   "dependencies": {
     "apollo-server": "^3.0.1",
+    "axios": "^0.21.1",
     "graphql": "^15.5.1",
+    "jest": "^27.0.6",
     "merge-graphql-schemas": "^1.7.8",
     "mongoose": "^5.13.2",
     "nodemon": "^2.0.12"

@@ -15,7 +15,8 @@ const contaRules = {
 
 
     saldo: async (conta) => {
-        return await ContaSchema.findOne({conta: conta});
+        let contaMongodb = await ContaSchema.findOne({conta: conta});
+        return contaMongodb.saldo;
     },
 
     sacar: async (conta, valor) => {
