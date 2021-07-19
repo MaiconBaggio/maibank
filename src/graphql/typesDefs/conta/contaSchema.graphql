@@ -1,0 +1,20 @@
+type Conta {
+    id: ID!,
+    nome: String!,
+    conta: Int!, 
+    saldo: Float!
+}
+
+type Query {
+    contas: [Conta!]!,
+    saldo(conta: Int!): Conta
+}
+
+type Mutation {
+    criarConta(nome: String!, conta: Int!): Conta
+    deletarConta(conta: Int!): Int
+
+    sacar(conta: Int!, valor: Float!): Conta   
+    depositar(conta: Int!, valor: Float!): Conta
+}
+
